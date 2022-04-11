@@ -1,0 +1,37 @@
+
+
+.showdata{
+  margin:30px 0px 30px 0px;
+  transition: 0.3s;
+  border-radius: 10px;
+  
+  padding:0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 80%;
+  margin: 36.5px auto;
+  justify-content: center;
+  color:pink;
+  text-shadow:0px 0px 12px pink ;
+}
+
+.showdata:hover{
+  color:rgb(143, 20, 243);
+    background-color: #333;
+    box-shadow: 3px 3px 10px #333;
+    text-shadow:0px 0px 12px rgb(143, 20, 243) ;
+}
+
+.text1{
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+th{
+  padding: 10px;
+}
+
+
+
+
+

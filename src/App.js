@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Data from './Page/Data/Data';
+import Activity from './Page/Activity/Activity';
+import Login from './Page/Login/Login';
+import Bmi from './Page/BMI/BMI';
+import EditActivity from './Page/Activity/EditActivity';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+      
+      <Routes>
+        <Route path="/" element={<Login/>}  />
+        <Route path="Activity" element={<Activity className="Activity"/> } />
+        <Route path="Data" element={<Data /> } />
+        <Route path="Bmi" element={<Bmi /> } />
+        <Route path="EditActivity/:id" element={<EditActivity/> } />
+      </Routes>
+      </div>
+    </BrowserRouter>
+
+  
   );
 }
 

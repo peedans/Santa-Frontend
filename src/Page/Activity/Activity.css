@@ -1,0 +1,196 @@
+
+.activity{
+    display: flex;
+    width: 65%;
+    margin: auto;
+    justify-content: center;
+    box-shadow:0px 0px 12px #ccc;
+    border-radius: 18px;
+    height: 648px;
+    border-radius: 8px;
+    padding: 0px 16px  23px 16px;
+    margin: 1px 0px 1px 50px;
+}
+
+.activityMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.activityInfo{
+    padding:0PX 0PX;
+    flex-direction: column;
+    display: flex;
+
+}
+
+
+.save{
+    padding: 5px 0px 0px 0px;
+    margin: 0px 15px 10px 15px;
+}
+
+.buttonSave{
+    padding:20px 20px;
+    margin: 35px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.activity1{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.activity2{
+    display: flex;
+    justify-content: center;
+}
+
+.Activity{
+    display: flex;
+    justify-content: center;
+    padding: 20PX 0PX;
+    font-size: 50px;
+    color:white;
+    text-shadow:0px 0px 12px #ccc
+}
+
+
+.inputActivityLoc{
+    padding:8PX 10PX;
+    border-radius: 10px;
+    width: 430px;
+    background-color:rgba(155, 155, 143, 0.205) ;
+    height: 40px;
+    border : 1px solid rgba(3, 1, 1, 0.027);
+    margin: 0px 10px 0px 10px ;
+    height: 60px;
+}
+
+.inputActivityAc{
+    padding:8PX 10PX;
+    border-radius: 10px;
+    width: 430px;
+    background-color:rgba(155, 155, 143, 0.205) ;
+    height: 40px;
+    border : 1px solid rgba(3, 1, 1, 0.027);
+    margin: 0px 10px 0px 0px;
+    height: 60px;
+}
+
+.inputActivitykal{
+    padding:8PX 10PX;
+    border-radius: 10px;
+    width: 430px;
+    background-color:rgba(155, 155, 143, 0.205) ;
+    height: 40px;
+    border : 1px solid rgba(3, 1, 1, 0.027);
+    margin: 0px 10px 0px 0px;
+    height: 60px;
+}
+
+.inputActivityDate{
+    padding:8PX 10PX;
+    border-radius: 10px;
+    width: 430px;
+    background-color:rgba(155, 155, 143, 0.205) ;
+    height: 40px;
+    border : 1px solid rgba(3, 1, 1, 0.027);
+    margin: 0px 10px 0px 10px;
+    height: 60px;
+}
+
+.buttonSave{
+    background-color:rgb(143, 20, 243) ;
+    width: 100%;
+    border : 1px solid rgba(3, 1, 1, 0.027);
+    border-radius: 10px;
+    color: white;
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.activity3{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.inputActivityWeightgoal{
+    background-color:rgba(155, 143, 155, 0.205) ;
+    border : 1px solid rgba(3, 1, 1, 0.027);
+    border-radius: 10px;
+    width: 212.5px;
+    height: 35px;
+    padding:8PX 10PX;
+    margin: 0px 10px 0px 0px;
+    height: 50px;
+}
+
+.inputActivityBMI{
+    background-color:rgba(155, 155, 143, 0.205) ;
+    border : 1px solid rgba(3, 1, 1, 0.027);
+    border-radius: 10px;
+    width: 212.5px;
+    height: 35px;
+    padding:8PX 10PX;
+    margin: 0px 10px 0px 0px;
+    height: 50px;
+}
+
+.inputActivityBodyfat{
+    background-color:rgba(155, 155, 143, 0.205) ;
+    border : 1px solid rgba(3, 1, 1, 0.027);
+    border-radius: 10px;
+    width: 212.5px;
+    height: 35px;
+    padding:8PX 10PX;
+    margin: 0px 10px 0px 0px;
+    height: 50px;
+}
+
+.inputActivityTdee{
+    background-color:rgba(155, 155, 143, 0.205) ;
+    border : 1px solid rgba(3, 1, 1, 0.027);
+    border-radius: 10px;
+    width: 212.5px;
+    height: 35px;
+    padding:8PX 10PX;
+    margin: 0px 10px 0px 0px;
+    height: 50px;
+}
+
+.inputActivityDes{
+    background-color:rgba(155, 155, 143, 0.205) ;
+    border : 1px solid rgba(3, 1, 1, 0.027);
+    border-radius: 10px;
+    width: 93%;
+    height: 100px;
+    padding:8PX 10PX;
+    margin: 0px 10px 10px 0px;
+}
+
+
+.errors{
+    color: red;
+    font-size: 12px;
+}
+
+.Register{
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px 0px 0px;
+}
+
+.activity4{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
