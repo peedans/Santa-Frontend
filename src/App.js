@@ -21,7 +21,7 @@ function App() {
         <Route path="Activity" element={<Activity className="Activity"/> } />
         <Route path="Data" element={<Data /> } />
         <Route path="Bmi" element={<Bmi /> } />
-        <Route path="EditActivity/:id" element={<EditActivity/> } />
+        <Route path="EditActivity/:activityDataId" element={<EditActivity/> } />
       </Routes>
       </div>
     </BrowserRouter>

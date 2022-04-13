@@ -1,12 +1,10 @@
 import './EditActivity.css';
 import './App.css';
-import { useState, useEffect ,useParams} from 'react';
+import { useState, useEffect} from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
-import Profile from '../../Components/Profile/Profile';
-// import Profile from '../Profile/Profile';
 import axios from 'axios';
-// import { response } from 'express';
-// import {useLocation} from 'react-router-dom';
+import {useParams,useNavigate} from 'react-router-dom';
+
 
 
 
@@ -29,7 +27,11 @@ const EditActivity = () => {
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
     const [checkValue, setCheckValue] = useState(false);
-    // const {id} = useParams();
+    const {activityDataId} = useParams();
+    console.log(activityDataId,"id")
+    const navigate = useNavigate();
+    
+    
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -46,7 +48,6 @@ const EditActivity = () => {
         const value = Object.values(formValues).findIndex(v => v === '')
         if (value === -1) {
             setCheckValue(true)
-
         };
     }
 
@@ -60,79 +61,42 @@ const EditActivity = () => {
     }, [formErrors]);
 
 
-    // useEffect(() => {
-    //     (async () => {
-    //         const client = axios.create({
-    //             baseURL: 'http://localhost:7000',
-    //         })
-    //         const res = await client.get(`/users/me/activity/${id}`)
-    //         setFormValues(res.data)
-    //         .then(res => {
-    //             if (res.status === 200) {
-    //                 setCheckValue(false)
-    //                 console.log(res)
-    //             }
-
-    //         })
-    //         console.log("console", res.data)
-    //     })();
-    // },[checkValue]);
-
-
-
-
-
-//      useEffect(() => {
-//         (async () => {
-//             const client = axios.create({
-//                 baseURL: 'http://localhost:7000',
-//             })
-    
-//                 await client.get(`/users/me/Activity/{$id}`({
-//                 }))
+    useEffect(() => {
+        (async () => {
+            const client = axios.create({
+                baseURL: 'http://localhost:7000',
+            })
+            const res = await client.get(`/users/me/activity/${activityDataId}`);
+            // console.log(id)
+            console.log(res)
+          
+            
+            setFormValues(res.data)
+           
                 
-//                     .then(res => {
-//                          setFormValues({
-//                                     ActivityList: (res.data.ActivityList),
-//                                     location: (res.data.location),
-//                                     Kcalories: (res.data.Kcalories),
-//                                     date: (res.data.date),
-//                                     Weightgoal: (res.data.Weightgoal),
-//                                     Bmi: (res.data.Bmi),
-//                                     Bodyfat: (res.data.Bodyfat),
-//                                     Tdee: (res.data.Tdee),
-//                                     Description: (res.data.Description)
+        })();
+    },[activityDataId]);
+
+
+    useEffect(() => {
+        (async () => {
+            const client = axios.create({
+                baseURL: 'http://localhost:7000',
+            })
+            const res = await client.put(`/users/me/activity/${activityDataId}`,formValues)
+            console.log(res)
+            .then(res => {
+                if (res.status === 200) {
+                    setCheckValue(false)
+                    console.log(res)
+                }
+
+            })
+        })();
+    },[checkValue]);
+
+
     
-                        
-
-//                     })
-//             }
-
-//         )();
-// }, []);
-
-
-    // useEffect(() => {
-    //     (async () => {
-    //         const client = axios.create({
-    //             baseURL: 'http://localhost:7000',
-    //         })
-    //         if (checkValue) {
-    //             console.log("checkValue", checkValue)
-    //             await client.put(`/users/me/Activity/${id}`, FormValues({
-    //             }))
-                
-    //                 .then(res => {
-    //                     if (res.status === 200) {
-    //                         setCheckValue(false)
-    //                         console.log(res)
-    //                     }
-
-    //                 })
-    //         }
-
-    //     })();
-    // }, [checkValue])
     const validate = (values) => {
         const errors = {};
         if (!values.Description) {
@@ -216,7 +180,7 @@ const EditActivity = () => {
                 <Navbar className="Navbar" />
             </header>
             <section className="Register">
-                <Profile className="Profile" />
+    
 
 
 
@@ -225,7 +189,7 @@ const EditActivity = () => {
 
                 <div className="activity">
 
-                {/* {Object.keys(formErrors).length === 0 && isSubmit ? (
+                    {/* {Object.keys(formErrors).length === 0 && isSubmit ? (
         <div className="ui message success">Signed in successfully</div>
       ) : (
         <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
@@ -233,7 +197,7 @@ const EditActivity = () => {
 
                     <form onSubmit={handleSubmit}>
                         <div >
-                            <p className="Activity">Activity</p>
+                            <p className="Activity">Edit Activity</p>
                             <div className="activityMenu">
                                 <div className='activity1'>
                                     <div className="activityInfo">

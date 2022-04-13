@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 const ActivityData = () => {
 
     const [data, setData] = useState([])
+    // const {activityDataId} = useParams();
 
     useEffect(() => {
         (async () => {
@@ -20,11 +21,22 @@ const ActivityData = () => {
         })();
     }, [])
 
+    // useEffect(() => {
+    //     (async () => {
+    //         const client = axios.create({
+    //             baseURL: 'http://localhost:7000',
+    //         })
+    //         const res = await client.delete(`/users/me/activity/${activityDataId}`);
+    //         setData(res.data)
+
+    //     })();
+    // }, [])
+
 
     const showdata = (items) => items.map((item, index) => {
         console.log(item)
         return (
-            <tr key={index}>
+            <tr key={item._id}>
 
                 <td>{item.ActivityList}</td>
                 <td>{item.location}</td>
@@ -36,15 +48,15 @@ const ActivityData = () => {
                 <td>{item.Bmi}</td>
                 <td>{item.Description}</td>
                 <td>
-                    <Link to={`/EditActivity/${item.id}`}>
+                    <Link to={`/EditActivity/${item._id}`}>
                         <button className="editActivity" >Edit Activity</button>
                     </Link>
                 </td>
 
                 <td>
-                    <Link>
-                        <button variant="danger">Delete</button>
-                    </Link>
+                    
+                        <button variant="danger" >Delete</button>
+                
                 </td>
 
                 {/* <button className="editActivity" >Edit Activity</button>
@@ -56,11 +68,12 @@ const ActivityData = () => {
 
     // const navigate = useNavigate();
     // const EditActivity = () => {
-    //     navigate("/EditActivity",{state:{id:data._id}})
+    //     c("/EditActivity",{state.id.data._id})
     //     console.log("EditActivity")
     // }
     return (
-        <>
+        <React.Fragment>
+
 
             <table className='showdata'>
                 <thead>
@@ -85,8 +98,10 @@ const ActivityData = () => {
 
             </table>
 
+        </React.Fragment>
 
-        </>
+
+
 
 
     )

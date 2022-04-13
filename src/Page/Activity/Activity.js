@@ -32,13 +32,15 @@ const Activity = () => {
 
     };
 
-    console.log(formValues);
+    // console.log(formValues);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setFormErrors(validate(formValues));
         setIsSubmit(true);
+        // ค่าของ array ของ formvalueที่เป็นค่าว่างหรือไม่
         const value = Object.values(formValues).findIndex(v => v === '')
+        // หาช่องว่างไม่เจอจะได้ค่า -1
         if (value === -1) {
             setCheckValue(true)
 
@@ -65,11 +67,14 @@ const Activity = () => {
                 await client.post('/users/me/activity', formValues)
                     .then(res => {
                         if (res.status === 200) {
+                            // กดส่งได้ครั้งเดียว
                             setCheckValue(false)
                             console.log(res)
                         }
 
                     })
+
+                
             }
 
         })();
