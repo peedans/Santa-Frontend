@@ -1,0 +1,35 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.Profile{
+  display: flex;
+  border-radius: 30px;
+}
+
+.Register{
+  display: flex;
+  padding: 0px 0px;
+  height: 100vh;
+}
+
+.Activity{
+  display: flex;
+  align-items: flex-end;
+  
+}
+
+.App{
+  height: 100vh;
+  background-color: rgb(28, 30, 33);
+}
+
+
+
+header{
+  display: flex;
+  justify-content: center;
+}
