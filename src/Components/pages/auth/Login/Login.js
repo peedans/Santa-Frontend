@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 //redux
 import { useDispatch } from 'react-redux'
 
+import { toast } from 'react-toastify';
+
 
 
 
@@ -16,11 +18,7 @@ const Login = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
-
-    const changeTheme = () => {
-        setTheme(theme === 'dark' ? 'light' : 'dark')
-    }
+    
 
     const [value, setValue] = useState({
         username: '',
@@ -56,8 +54,9 @@ const Login = () => {
 
         login(value)
             .then(res => {
-                console.log(res.data)
-                alert(res.data)
+                // console.log(res.data)
+                // alert(res.data)
+                toast.success('Login Success')
 
                 // dispatch เก็บที่ redux
                 dispatch({ 
@@ -69,11 +68,13 @@ const Login = () => {
                     },
                 });
                 // เก็บที่ localStorage
+                
                 localStorage.setItem('token', res.data.token)
                 roleBaseRedirect(res.data.payload.user.role)
+                
             }).catch(err => {
                 console.log(err.response.data);
-                alert(err.response.data)
+                toast.error(err.response.data)
             })
     }
 
@@ -81,7 +82,7 @@ const Login = () => {
 
 
     return (
-        <div className='appLogin' data-theme={theme}>
+        <div className='appLogin' >
             <div className="login">
                 <h1 className="textLogin">login</h1>
                 <div className='container'>
@@ -113,9 +114,9 @@ const Login = () => {
                     </div>
                     <p className="create">Create Account</p>
                 </div>
-                <div className='theme-toggle'>
-                    <h2 className="lightTheme">Light Theme</h2>
-                    <i onClick={changeTheme} class='fas fa-toggle-on'></i>
+                <div className='textSanta'>
+                    <h2 className="lightTheme">SANTA</h2>
+                    <i  class='fas fa-toggle-on'></i>
                 </div>
             </div>
         </div>

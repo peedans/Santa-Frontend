@@ -6,6 +6,8 @@ import Profile from '../Profile/Profile';
 // import Profile from '../Profile/Profile';
 import axios from 'axios';
 import {useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
+
 const Activity = () => {
     const initialValues = {
         ActivityList: "",
@@ -62,7 +64,7 @@ const Activity = () => {
     useEffect(() => {
         (async () => {
             const client = axios.create({
-                baseURL: 'http://localhost:7000',
+                baseURL: 'https://final-santa-backend-hbeg0rl6u-peedans.vercel.app',
             })
             if (checkValue) {
                 console.log("checkValue", checkValue)
@@ -72,7 +74,7 @@ const Activity = () => {
                             // กดส่งได้ครั้งเดียว
                             setCheckValue(false)
                             console.log(res)
-                            alert("ส่งข้อมูลสำเร็จ")
+                            toast.success("ส่งข้อมูลสำเร็จ")
                             navigate("/data")
                         }
 
@@ -164,6 +166,7 @@ const Activity = () => {
             {/* <header>
                 <Navbar className="Navbar" />
             </header> */}
+            
             <section className="Register">
                 <Profile className="Profile" />
 

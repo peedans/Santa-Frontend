@@ -1,5 +1,4 @@
 
-
 .showdata{
   margin:30px 0px 30px 0px;
   transition: 0.3s;
@@ -31,7 +30,6 @@
 
 th{
   padding: 10px;
-  
 }
 
 
@@ -79,7 +77,8 @@ td{
   text-shadow:0px 0px 12px pink ;
   box-shadow:0px 0px 12px pink ;
   background-color: #333;
- 
+  justify-self: flex-end;
+  
 }
 
 

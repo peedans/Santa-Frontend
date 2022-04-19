@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Register.css'
 import { register } from '../../functions/auth'
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const [value, setValue] = useState({
@@ -25,16 +26,15 @@ const Register = () => {
     e.preventDefault()
     console.log(value)
     if (value.password !== value.password1) {
-      alert('รหัสผ่านไม่ตรงกัน')
+      toast.err('รหัสผ่านไม่ตรงกัน')
     } else {
-      alert("ok")
       register(value)
       .then(res => {
         console.log(res.data)
-        alert(res.data)
+        toast.success(res.data)
       }).catch(err=>{
         console.log(err.response.data);
-        alert(err.response.data)
+        toast.err(err.response.data)
       })
     }
      

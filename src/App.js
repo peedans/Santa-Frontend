@@ -11,6 +11,7 @@ import HomeAdmin from './Components/pages/Admin/HomeAdmin';
 import HomeUser from './Components/pages/user/HomeUser';
 import ManageAdmin from './Components/pages/Admin/ManageAdmin';
 
+
 import {
   BrowserRouter,
   Routes,
@@ -27,6 +28,8 @@ import { useDispatch } from 'react-redux'
 import UserRoute from './Components/routes/UserRoute';
 import AdminRoute from './Components/routes/AdminRoute';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -59,6 +62,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <ToastContainer />
         <Navbar />
         <Routes>
           <Route path="/" element={<Login />} />
@@ -89,8 +93,14 @@ function App() {
               <UserRoute>
                 <HomeUser />
               </UserRoute>
+
+              
             }
+
+            
           />
+
+
         </Routes>
       </div>
     </BrowserRouter>

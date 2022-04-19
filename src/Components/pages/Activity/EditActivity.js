@@ -4,6 +4,7 @@ import { useState, useEffect} from 'react';
 
 import axios from 'axios';
 import {useParams,useNavigate} from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 
@@ -57,7 +58,7 @@ const EditActivity = () => {
     useEffect(() => {
         (async () => {
             const client = axios.create({
-                baseURL: 'http://localhost:7000',
+                baseURL: 'https://final-santa-backend-hbeg0rl6u-peedans.vercel.app',
             })
             const res = await client.get(`/users/me/activity/${activityDataId}`);
             // console.log(id)
@@ -159,6 +160,7 @@ const EditActivity = () => {
                 baseURL: 'http://localhost:7000',
             })
             const res = await client.put(`/users/me/activity/${activityDataId}`,formValues)
+            toast.success("อัปเดตข้อมูลสำเร็จ")
             navigate('/data')
                 
 
@@ -169,6 +171,7 @@ const EditActivity = () => {
 
     return (
         <div className='App'>
+           
             
             <section className="Register">
     

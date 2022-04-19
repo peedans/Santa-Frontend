@@ -2,14 +2,14 @@ import axios from 'axios';
 
 
 export const register =async(value)=>
-    await axios.post ('http://localhost:7000/api//register',value);
+    await axios.post ('https://final-santa-backend-hbeg0rl6u-peedans.vercel.app/api//register',value);
 
 export const login =async(value)=>
-    await axios.post ('http://localhost:7000/api/login',value);
+    await axios.post ('https://final-santa-backend-hbeg0rl6u-peedans.vercel.app/api/login',value);
 
 export const currentUser =async(authtoken)=>{
     // console.log(authtoken);
-   return await axios.post ('http://localhost:7000/api/current-user',
+   return await axios.post ('https://final-santa-backend-hbeg0rl6u-peedans.vercel.app/api/current-user',
     {},
     {
         headers:{
@@ -21,7 +21,7 @@ export const currentUser =async(authtoken)=>{
 
 export const currentAdmin =async(authtoken)=>{
     // console.log(authtoken);
-   return await axios.post ('http://localhost:7000/api/current-admin',
+   return await axios.post ('https://final-santa-backend-hbeg0rl6u-peedans.vercel.app/api/current-admin',
     {},
     {
         headers:{

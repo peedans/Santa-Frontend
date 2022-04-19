@@ -2,7 +2,7 @@ import './ActivityData.css';
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom";
-
+import { toast } from 'react-toastify';
 
 
 const ActivityData = () => {
@@ -18,7 +18,7 @@ const ActivityData = () => {
     const getData = async () => {
 
         const client = axios.create({
-            baseURL: 'http://localhost:7000',
+            baseURL: 'https://final-santa-backend-hbeg0rl6u-peedans.vercel.app',
         })
         const res = await client.get('/users/me/activity')
         setData(res.data)
@@ -41,14 +41,15 @@ const ActivityData = () => {
     const deleteActivity = async (id) => {
         try {
             const client = axios.create({
-                baseURL: 'http://localhost:7000',
+                baseURL: 'https://final-santa-backend-hbeg0rl6u-peedans.vercel.app',
             })
             const res = await client.delete(`/users/me/activity/${id}`);
 
             //   console.log("aa",res.data)
             getData();
 
-
+            // ('Delete Success')
+            toast.dark('Delete Success')
 
         } catch (error) {
             console.log(error)

@@ -60,7 +60,7 @@ const HomeUser = () => {
     useEffect(() => {
         (async () => {
             const client = axios.create({
-                baseURL: 'http://localhost:7000',
+                baseURL: 'https://final-santa-backend-hbeg0rl6u-peedans.vercel.app',
             })
             if (checkValue) {
                 console.log("checkValue", checkValue)
