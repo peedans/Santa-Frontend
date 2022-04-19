@@ -34,7 +34,7 @@ const Register = () => {
         toast.dark('ลงทะเบียนสำเร็จ')
       }).catch(err=>{
         // console.log(err.response.data);
-        toast.dark('ลงทะเบียนไม่สำเร็จ')
+        toast.dark('มีชื่อผู้ใช้นี้แล้ว กรุณาลองใหม่อีกครั้ง')
       })
     }
      
