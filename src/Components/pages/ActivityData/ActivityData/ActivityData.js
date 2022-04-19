@@ -1,7 +1,7 @@
 import './ActivityData.css';
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
@@ -16,16 +16,16 @@ const ActivityData = () => {
     }, [])
 
     const getData = async () => {
-        
-            const client = axios.create({
-                baseURL: 'http://localhost:7000',
-            })
-            const res = await client.get('/users/me/activity')
-            setData(res.data)
-            // console.log("console", res.data)
-        
+
+        const client = axios.create({
+            baseURL: 'http://localhost:7000',
+        })
+        const res = await client.get('/users/me/activity')
+        setData(res.data)
+        // console.log("console", res.data)
+
     }
-    
+
 
     // useEffect(() => {
     //     (async () => {
@@ -38,22 +38,22 @@ const ActivityData = () => {
     //     })();
     // }, [])
 
-   const deleteActivity = async (id) => {
-       try{
-              const client = axios.create({
+    const deleteActivity = async (id) => {
+        try {
+            const client = axios.create({
                 baseURL: 'http://localhost:7000',
-              })
-              const res = await client.delete(`/users/me/activity/${id}`);
-             
+            })
+            const res = await client.delete(`/users/me/activity/${id}`);
+
             //   console.log("aa",res.data)
             getData();
-              
 
-              
-       }catch(error) {
-           console.log(error)
-       }
-   }
+
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
 
     const showdata = (items) => items.map((item, index) => {
@@ -61,15 +61,15 @@ const ActivityData = () => {
         return (
             <tr key={item._id}>
 
-                <td>{item.ActivityList}</td>
-                <td>{item.location}</td>
-                <td>{item.Kcalories}</td>
-                <td>{item.date}</td>
-                <td>{item.Weightgoal}</td>
-                <td>{item.Bodyfat}</td>
-                <td>{item.Tdee}</td>
-                <td>{item.Bmi}</td>
-                <td>{item.Description}</td>
+                <td >{item.ActivityList}</td>
+                <td >{item.location}</td>
+                <td >{item.Kcalories}</td>
+                <td >{item.date}</td>
+                <td >{item.Weightgoal}</td>
+                <td >{item.Bodyfat}</td>
+                <td >{item.Tdee}</td>
+                <td >{item.Bmi}</td>
+                <td >{item.Description}</td>
                 <td>
                     <Link to={`/EditActivity/${item._id}`}>
                         <button className="editActivity" >Edit Activity</button>
@@ -77,17 +77,17 @@ const ActivityData = () => {
                 </td>
 
                 <td>
-                
-                        <button variant="danger" onClick={()=>deleteActivity(item._id)} >Delete</button>
-                        
+
+                    <button variant="danger" onClick={() => deleteActivity(item._id)} className="deleteActivity" >Delete</button>
+
                 </td>
 
-                
+
             </tr>
         )
     })
 
-  
+
     return (
         <React.Fragment>
 
@@ -111,8 +111,9 @@ const ActivityData = () => {
                 <tbody>
                     {showdata(data)}
                 </tbody>
-
-
+                <Link to={'/Activity'}>
+                    <button className="buttonAddactivity">Add Activity</button>
+                </Link>
             </table>
 
         </React.Fragment>

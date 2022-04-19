@@ -133,15 +133,15 @@ const Activity = () => {
         }
         if (!values.Tdee) {
             errors.Tdee = "Tdee is required";
-        } else if (values.Tdee.length < 3) {
-            errors.Tdee = "Tdee must be greater than 3";
+        } else if (values.Tdee.length < 5) {
+            errors.Tdee = "Tdee must be greater than 5";
         } else if (values.Tdee.length > 20) {
             errors.Tdee = "Tdee must be less than 20";
         }
         if (!values.Bmi) {
             errors.Bmi = "BMI is required";
-        } else if (values.Bmi.length < 3) {
-            errors.Bmi = "BMI must be greater than 3";
+        } else if (values.Bmi.length < 2) {
+            errors.Bmi = "BMI must be greater than 2";
         } else if (values.Bmi.length > 20) {
             errors.Bmi = "BMI must be less than 20";
         }
@@ -174,11 +174,7 @@ const Activity = () => {
 
                 <div className="activityUser">
 
-                {/* {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <div className="ui message success">Signed in successfully</div>
-      ) : (
-        <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
-      )} */}
+                
 
                     <form onSubmit={handleSubmit}>
                         <div >

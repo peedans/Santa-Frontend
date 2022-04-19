@@ -29,7 +29,7 @@ const Profile = () => {
         <form onSubmit={onSubmit} className="ProfileUser">
             <div >
                 <div className="Picture">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZQVPGnP6M3djhYzWznT59dt_oEjRzH7J-_g&usqp=CAU" alt="" width="180" height="180"
+                    <img src="https://image.similarpng.com/very-thumbnail/2020/12/Flat-design-santa-claus-premium-vector-PNG.png" alt="" width="180" height="180"
                         onChange={(e) => setPicture(e.target.value)}
                     />
                 </div>
