@@ -11,7 +11,7 @@ const Navbar = () => {
             type:'LOGOUT',
             payload:null
         });
-        navigate('/Register')
+        navigate('/')
     }
     return (
     <header>
