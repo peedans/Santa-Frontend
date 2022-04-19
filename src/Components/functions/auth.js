@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 export const register =async(value)=>
-    await axios.post ('https://final-santa-backend-hbeg0rl6u-peedans.vercel.app/api//register',value);
+    await axios.post ('https://final-santa-backend-hbeg0rl6u-peedans.vercel.app/api/register',value);
 
 export const login =async(value)=>
     await axios.post ('https://final-santa-backend-hbeg0rl6u-peedans.vercel.app/api/login',value);

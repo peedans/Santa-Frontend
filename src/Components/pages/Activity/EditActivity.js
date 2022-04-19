@@ -157,7 +157,7 @@ const EditActivity = () => {
         const value = Object.values(formValues).findIndex(v => v === '')
         if (value === -1) {
             const client = axios.create({
-                baseURL: 'http://localhost:7000',
+                baseURL: 'https://final-santa-backend-hbeg0rl6u-peedans.vercel.app',
             })
             const res = await client.put(`/users/me/activity/${activityDataId}`,formValues)
             toast.dark("อัปเดตข้อมูลสำเร็จ")

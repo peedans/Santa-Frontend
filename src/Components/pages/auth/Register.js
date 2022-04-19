@@ -31,10 +31,10 @@ const Register = () => {
       register(value)
       .then(res => {
         console.log(res.data)
-        toast.success(res.data)
+        toast.dark(res.data)
       }).catch(err=>{
         console.log(err.response.data);
-        toast.err(err.response.data)
+        toast.dark(err.response.data)
       })
     }
      
