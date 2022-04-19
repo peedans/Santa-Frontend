@@ -74,7 +74,7 @@ const Activity = () => {
                             // กดส่งได้ครั้งเดียว
                             setCheckValue(false)
                             console.log(res)
-                            toast.success("ส่งข้อมูลสำเร็จ")
+                            toast.dark("ส่งข้อมูลสำเร็จ")
                             navigate("/data")
                         }
 

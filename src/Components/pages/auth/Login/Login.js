@@ -56,7 +56,7 @@ const Login = () => {
             .then(res => {
                 // console.log(res.data)
                 // alert(res.data)
-                toast.success('Login Success')
+                toast.dark('Login Success')
 
                 // dispatch เก็บที่ redux
                 dispatch({ 

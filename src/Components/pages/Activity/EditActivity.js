@@ -160,7 +160,7 @@ const EditActivity = () => {
                 baseURL: 'http://localhost:7000',
             })
             const res = await client.put(`/users/me/activity/${activityDataId}`,formValues)
-            toast.success("อัปเดตข้อมูลสำเร็จ")
+            toast.dark("อัปเดตข้อมูลสำเร็จ")
             navigate('/data')
                 
 
