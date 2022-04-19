@@ -4,6 +4,7 @@ import { useState, useEffect  } from 'react';
 import Profile from '../Profile/Profile';
 import axios from 'axios';
 import {useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 const HomeUser = () => {
     const initialValues = {
         ActivityList: "",
@@ -70,7 +71,7 @@ const HomeUser = () => {
                             // กดส่งได้ครั้งเดียว
                             setCheckValue(false)
                             console.log(res)
-                            alert("ส่งข้อมูลสำเร็จ")
+                            toast.dark("บันทึกข้อมูลสำเร็จ")
                             navigate("/data")
                         }
 

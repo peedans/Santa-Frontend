@@ -48,7 +48,7 @@ const BMI = () => {
       } else if (bmi >= 25 && bmi < 30) {
         imgSrc = "https://scontent.xx.fbcdn.net/v/t1.15752-9/277213450_665400794568794_2191785693523521700_n.png?stp=dst-png_s206x206&_nc_cat=101&ccb=1-5&_nc_sid=aee45a&_nc_ohc=IFsz5V5s2iAAX9Tu5MN&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIWzMK4yrg15ri7KrUGqBFWS7Ip-rNciOA7tJNEn5FUhQ&oe=626BB3DF"
       } else {
-        imgSrc = "https://scontent.xx.fbcdn.net/v/t1.15752-9/276294899_491668939274632_2884974047106488180_n.png?_nc_cat=100&ccb=1-5&_nc_sid=aee45a&_nc_ohc=hP5ZI7WJqBYAX8YVPIR&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVLtURY-c5sxbmWYVBugSDuQqfUlPrWCRbiHkgQP_Ob7iQ&oe=626A765A"
+        imgSrc = "https://scontent.furt2-1.fna.fbcdn.net/v/t1.15752-9/277615384_410641730403639_2929928611027152228_n.png?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_ohc=IKtXgfZxX3cAX-S3Qbx&tn=BUYCBEtl_yBOthHs&_nc_ht=scontent.furt2-1.fna&oh=03_AVJxr1l8B0NanW4Q6Zfb51x_ZND71acAalO9QQk-Bt56kA&oe=6284E7E1"
       }
     }
   

@@ -49,7 +49,7 @@ const ActivityData = () => {
             getData();
 
             // ('Delete Success')
-            toast.dark('Delete Success')
+            toast.dark('ลบข้อมูลสำเร็จ')
 
         } catch (error) {
             console.log(error)

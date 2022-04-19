@@ -26,7 +26,7 @@ const Register = () => {
     e.preventDefault()
     console.log(value)
     if (value.password !== value.password1) {
-      toast.err('รหัสผ่านไม่ตรงกัน')
+      toast.dark('รหัสผ่านไม่ตรงกัน')
     } else {
       register(value)
       .then(res => {
