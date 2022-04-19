@@ -31,10 +31,10 @@ const Register = () => {
       register(value)
       .then(res => {
         console.log(res.data)
-        toast.dark(res.data)
+        toast.dark(res.data+'ลงทะเบียนสำเร็จ')
       }).catch(err=>{
         console.log(err.response.data);
-        toast.dark(err.response.data)
+        toast.dark(err.response.data+'ลงทะเบียนไม่สำเร็จ')
       })
     }
      
