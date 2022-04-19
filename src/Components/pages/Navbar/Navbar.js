@@ -1,6 +1,7 @@
 import './Navbar.css';
 import { Link,useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux'
+import { toast } from 'react-toastify';
 const Navbar = () => {
 
     const dispatch = useDispatch()
@@ -11,6 +12,7 @@ const Navbar = () => {
             type:'LOGOUT',
             payload:null
         });
+        toast.dark('ออกจากระบบแล้ว')
         navigate('/')
     }
     return (
