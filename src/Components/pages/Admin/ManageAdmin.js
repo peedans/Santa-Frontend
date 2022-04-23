@@ -47,7 +47,7 @@ const ManageAdmin = () => {
               <td>{item.username}</td>
               <td>{item.role}</td>
               <td >
-              <div class='fas fa-toggle-on' checked={item.enabled} onChange={(e)=>handleOnchange(e,item._id)}></div>
+              <div className='fas fa-toggle-on' checked={item.enabled} onChange={(e)=>handleOnchange(e,item._id)}></div>
               {/* <Switch checked={item.enabled} onChange={(e)=>handleOnchange(e,item._id)} /> */}
               </td>
               <td>{item.createdAt}</td>

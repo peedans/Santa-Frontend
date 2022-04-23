@@ -47,7 +47,7 @@ const Register = () => {
       <h1 className='headRegister'>Register</h1>
       <form onSubmit={handelSubmit} className='container'>
         <label className='labelText'>Username</label>
-        <input type="text" name="username" placeholder="Name" onChange={handleChange} className="inputForm" />
+        <input type="text" name="username" placeholder="Username" onChange={handleChange} className="inputForm" />
 
         <label className='labelText'>Password</label>
         <input type="text" name="password" placeholder="password" onChange={handleChange} className="inputForm"/>

@@ -55,6 +55,7 @@ const HomeUser = () => {
             // console.log(formValues)
         }
         // console.log(formValues);
+        console.log(formErrors);
     }, [formErrors]);
 
 

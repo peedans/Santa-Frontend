@@ -88,11 +88,11 @@ const Login = () => {
                 <div className='container'>
                     <div className='top'>
 
-                        <i class='fab fa-google'></i>
-                        <i class='fab fa-facebook-square'></i>
-                        <i class='fab fa-linkedin'></i>
-                        <i class='fab fa-twitter-square'></i>
-                        <i class='fab fa-apple'></i>
+                        <i className='fab fa-google'></i>
+                        <i className='fab fa-facebook-square'></i>
+                        <i className='fab fa-linkedin'></i>
+                        <i className='fab fa-twitter-square'></i>
+                        <i className='fab fa-apple'></i>
                     </div>
                     <p className='divider'><span>Or</span></p>
 
@@ -102,7 +102,7 @@ const Login = () => {
                         <label>Password</label>
                         <input type="text" placeholder='Enter your password' className="inputForm" onChange={handleChange} name='password' />
                         <div className='remember'>
-                            <input type='checkbox' checked='checked' className='checkBox' />
+                            <input type='checkbox' onChange='checked' className='checkBox' />
                             <p>Remember Me</p>
                         </div>
                         <button className="buttonLogin">Login</button>
@@ -116,7 +116,7 @@ const Login = () => {
                 </div>
                 <div className='textSanta'>
                     <h2 className="lightTheme">SANTA</h2>
-                    <i  class='fas fa-toggle-on'></i>
+                    <i  className='fas fa-toggle-on'></i>
                 </div>
             </div>
         </div>

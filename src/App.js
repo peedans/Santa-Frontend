@@ -11,7 +11,6 @@ import HomeAdmin from './Components/pages/Admin/HomeAdmin';
 import HomeUser from './Components/pages/user/HomeUser';
 import ManageAdmin from './Components/pages/Admin/ManageAdmin';
 
-
 import {
   BrowserRouter,
   Routes,
