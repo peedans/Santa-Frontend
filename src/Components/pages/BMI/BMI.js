@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './BMI.css'
+import { toast } from 'react-toastify';
 
 const BMI = () => {
     const [weight, setWeight] = useState('');
@@ -14,7 +15,7 @@ const BMI = () => {
       e.preventDefault();
   
       if (weight === '' || height === '') {
-        alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+        toast.dark('กรุณากรอกข้อมูลให้ครบถ้วน');
       } else {
         let bmi = (weight / (height / 100 * height / 100))
         setBmi(bmi.toFixed(1));

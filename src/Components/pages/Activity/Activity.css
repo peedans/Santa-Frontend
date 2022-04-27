@@ -65,7 +65,7 @@
 .inputActivityLoc{
     padding:8PX 10PX;
     border-radius: 10px;
-    width: 430px;
+    width: 210%;
     background-color:rgba(155, 155, 143, 0.205) ;
     height: 40px;
     border : 1px solid rgba(3, 1, 1, 0.027);
@@ -77,7 +77,7 @@
 .inputActivityAc{
     padding:8PX 10PX;
     border-radius: 10px;
-    width: 430px;
+    width: 210%;
     background-color:rgba(155, 155, 143, 0.205) ;
     height: 40px;
     border : 1px solid rgba(3, 1, 1, 0.027);

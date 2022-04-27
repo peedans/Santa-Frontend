@@ -49,8 +49,9 @@
     border-radius: 10px;
     background-color:rgba(155, 155, 143, 0.205) ;
     border : 1px solid rgba(3, 1, 1, 0.0);
-    margin: 10PX 10PX 0PX 10PX;
+    margin: 10PX 0PX 0PX 10PX;
     height: 40px;
+    width: 70%;
 }
 
 .inputName{
@@ -58,8 +59,9 @@
     border-radius: 10px;
     background-color:rgba(155, 155, 143, 0.205) ;
     border : 1px solid rgba(3, 1, 1, 0.0);
-    margin: 10PX 10PX 0PX 30PX;
+    margin: 10PX 0PX 0PX 30PX;
     height: 40px;
+    width: 70%;
 }
 
 .inputHeight{
@@ -67,8 +69,9 @@
     border-radius: 10px;
     background-color:rgba(155, 155, 143, 0.205) ;
     border : 1px solid rgba(3, 1, 1, 0.0);
-    margin: 10PX 10PX 0PX 22PX;
+    margin: 10PX 0PX 0PX 22PX;
     height: 40px;
+    width: 70%;
 }
 
 .inputWeight{
@@ -76,8 +79,9 @@
     border-radius: 10px;
     background-color:rgba(155, 155, 143, 0.205) ;
     border : 1px solid rgba(3, 1, 1, 0.0);
-    margin: 10PX 10PX 0PX 20PX;
+    margin: 10PX 0PX 0PX 20PX;
     height: 40px;
+    width: 70%;
 }
 
 .inputAge{
@@ -85,8 +89,9 @@
     border-radius: 10px;
     background-color:rgba(155, 155, 143, 0.205) ;
     border : 1px solid rgba(3, 1, 1, 0.0);
-    margin: 10PX 10PX 0PX 50PX;
+    margin: 10PX 0PX 0PX 50PX;
     height: 40px;
+    width: 70%;
 }
 
 .inputAddress{
@@ -94,6 +99,7 @@
     border-radius: 10px;
     background-color:rgba(155, 155, 143, 0.205) ;
     border : 1px solid rgba(3, 1, 1, 0.0);
-    margin: 10PX 10PX 0PX 15PX;
+    margin: 10PX 0PX 0PX 15PX;
     height: 40px;
+    width: 70%;
 }
