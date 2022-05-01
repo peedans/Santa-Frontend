@@ -45,11 +45,11 @@ const BMI = () => {
       imgSrc = null
     } else {
       if (bmi < 25) {
-        imgSrc = "https://scontent.xx.fbcdn.net/v/t1.15752-9/276006606_1216050612132322_3511368579098220724_n.png?stp=dst-png_p235x165&_nc_cat=108&ccb=1-5&_nc_sid=aee45a&_nc_ohc=Pp05ccUc_eIAX93eLrF&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIbRgmnH7sVaR3tef-eHVpwO4csV-RSJteLfrYW-MhwsQ&oe=626B7940"
+        imgSrc = "https://scontent.fhdy2-1.fna.fbcdn.net/v/t1.15752-9/276006606_1216050612132322_3511368579098220724_n.png?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeEAZ5yETOtW4lPjKRKCnaviWtF_oBjhq4xa0X-gGOGrjGxXnsEVqkty0SyxAoxLXvatxo7BcboVJIzAbzajvvRK&_nc_ohc=KiKLLDb7Jo0AX-m2sKp&tn=7s4tO62H4I9pPY4J&_nc_ht=scontent.fhdy2-1.fna&oh=03_AVInVoz0bUEzJqf5o77OQMI0hXnBUyQ8FFxYb7oZdWE0ew&oe=62930640"
       } else if (bmi >= 25 && bmi < 30) {
-        imgSrc = "https://scontent.xx.fbcdn.net/v/t1.15752-9/277213450_665400794568794_2191785693523521700_n.png?stp=dst-png_s206x206&_nc_cat=101&ccb=1-5&_nc_sid=aee45a&_nc_ohc=IFsz5V5s2iAAX9Tu5MN&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIWzMK4yrg15ri7KrUGqBFWS7Ip-rNciOA7tJNEn5FUhQ&oe=626BB3DF"
+        imgSrc = "https://scontent.fhdy2-1.fna.fbcdn.net/v/t1.15752-9/277213450_665400794568794_2191785693523521700_n.png?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeGRRatGPqhua7aJWieFIbR85He7fMZZQizkd7t8xllCLEIWQ1Ms3yFdw0Uxpv6kO9IWMa3zKi5T8z3WZrFztIOT&_nc_ohc=yKKlpMphUsgAX9kUjL3&_nc_ht=scontent.fhdy2-1.fna&oh=03_AVJrdy2f-Tcgj3ZE-PQ4bMcdYjahII9pihYVgyseOjbJSQ&oe=629340DF"
       } else {
-        imgSrc = "https://scontent.furt2-1.fna.fbcdn.net/v/t1.15752-9/277615384_410641730403639_2929928611027152228_n.png?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_ohc=IKtXgfZxX3cAX-S3Qbx&tn=BUYCBEtl_yBOthHs&_nc_ht=scontent.furt2-1.fna&oh=03_AVJxr1l8B0NanW4Q6Zfb51x_ZND71acAalO9QQk-Bt56kA&oe=6284E7E1"
+        imgSrc = "https://scontent.fhdy2-1.fna.fbcdn.net/v/t1.15752-9/277615384_410641730403639_2929928611027152228_n.png?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeEG4i_CeIB8wntVjm6bozHhdBYcmjyhsDR0FhyaPKGwNHhMO_dDrxR66D1sfezXf880s_CPO-KRBmc2Kzzl_XTu&_nc_ohc=DJtGsnVyfdIAX9gQGt1&_nc_ht=scontent.fhdy2-1.fna&oh=03_AVK0MYtIEo6OMFX1aVMiRKQs4KXpnCsml9zWC3Jdv0U-FQ&oe=6294B9E1"
       }
     }
   
